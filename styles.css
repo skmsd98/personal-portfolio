@@ -77,7 +77,7 @@ body {
 }
 
 .main-intro .buttons {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 .main-intro .buttons a {
@@ -89,19 +89,13 @@ body {
 
 .main-intro .scroll-down-button {
     display: inline-block;
-    margin-top: 9rem;
+    margin-top: 7rem;
 }
 
-.links {
-    position: fixed;
-    left: 0;
-    top: 10%;
-    background-color: white;
-    border-radius: 0 20px 20px 0;
-}
-
-.links i {
-    margin: 2.5rem 1rem;
-    color: black;
-    font-size: 1.4rem;
+.links ul {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
