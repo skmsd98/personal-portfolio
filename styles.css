@@ -17,6 +17,14 @@ a {
     color: inherit;
 }
 
+/* VARIABLES */
+
+:root {
+    --orange: rgb(252, 99, 11);
+}
+
+/* BASIC STYLES */
+
 body {
     font-family: "Montserrat", sans-serif;
     color: white;
@@ -27,6 +35,8 @@ body {
     max-width: 1130px;
     margin: auto;
 }
+
+/* HERO SECTION */
 
 .hero-section {
     background-image: url(./images//pexels-lukas-574071.jpg);
@@ -81,7 +91,7 @@ body {
 }
 
 .main-intro .buttons a {
-    background-color: rgb(252, 99, 11);
+    background-color: var(--orange);
     padding: 0.8rem 1.8rem;
     border-radius: 30px;
     margin: 0.3rem;
@@ -98,4 +108,81 @@ body {
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+    background-color: rgb(27, 27, 27);
+    padding: 6rem 0;
+}
+
+.heading-container {
+    text-align: center;
+}
+
+.section-heading {
+    display: inline-block;
+    font-size: 2.5rem;
+    padding: 0 4rem 1rem 4rem;
+    position: relative;
+}
+
+.section-heading::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    content: "";
+    bottom: 0px;
+    max-width: 300px;
+    margin: 0 auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+}
+
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    margin-top: 4.5rem;
+}
+
+.section-content > .image-container {
+    width: 30%;
+    text-align: center;
+}
+
+.section-content .text-container {
+    width: 70%;
+}
+
+.text-container h3 {
+    font-size: 1.5rem;
+}
+
+.text-container .profession {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 0.7rem;
+}
+
+.text-container p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    word-spacing: 0.1rem;
+    margin-top: 1.6rem;
+}
+
+.text-container a {
+    display: inline-block;
+    background-color: rgb(44, 44, 44);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.about-section img {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
