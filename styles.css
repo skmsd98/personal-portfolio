@@ -36,6 +36,26 @@ body {
     margin: auto;
 }
 
+.section-heading {
+    display: inline-block;
+    font-size: 2.5rem;
+    padding: 0 4rem 1rem 4rem;
+    position: relative;
+}
+
+.section-heading::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    content: "";
+    bottom: 0px;
+    max-width: 300px;
+    margin: 0 auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
+}
+
 /* HERO SECTION */
 
 .hero-section {
@@ -121,26 +141,6 @@ body {
     text-align: center;
 }
 
-.section-heading {
-    display: inline-block;
-    font-size: 2.5rem;
-    padding: 0 4rem 1rem 4rem;
-    position: relative;
-}
-
-.section-heading::after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    width: 100%;
-    content: "";
-    bottom: 0px;
-    max-width: 300px;
-    margin: 0 auto;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgb(165, 165, 165), rgba(0, 0, 0, 0));
-}
-
 .about-section .section-content {
     display: flex;
     align-items: center;
@@ -222,4 +222,42 @@ body {
 .service-item p {
     font-size: 0.9rem;
     margin-top: 1rem;
+}
+
+/* WORK AND EDUCATION SECTION */
+
+.work-and-education-section {
+    background-color: rgb(27, 27, 27);
+    padding: 6rem 0;
+}
+
+.work-and-education-section .section-content {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-and-education-section .section-content > * {
+    flex-basis: 49%;
+    padding: 3rem 4rem;
+    background-color: rgb(14, 18, 27);
+}
+
+.work-container .work-item {
+    margin-bottom: 3rem;
+}
+
+.work-item p {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    margin-top: 0.9rem;
+}
+
+.work-item .timeline {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--orange);
+    font-weight: bold;
+    margin-top: 0.9rem;
 }
