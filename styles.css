@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* Defaults */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1130px;
+    margin: auto;
+}
+
+.hero-section {
+    background-image: url(./images//pexels-lukas-574071.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.navbar > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 2.5rem 1.2rem;
+}
+
+.main-intro {
+    margin: auto;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.main-intro h5 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.main-intro h1 {
+    font-size: 3.2rem;
+    margin-top: 2rem;
+}
+
+.main-intro .buttons {
+    margin-top: 3rem;
+}
+
+.main-intro .buttons a {
+    background-color: rgb(252, 99, 11);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    margin: 0.3rem;
+}
+
+.main-intro .scroll-down-button {
+    display: inline-block;
+    margin-top: 9rem;
+}
+
+.links {
+    position: fixed;
+    left: 0;
+    top: 10%;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+}
+
+.links i {
+    margin: 2.5rem 1rem;
+    color: black;
+    font-size: 1.4rem;
+}
