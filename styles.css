@@ -122,7 +122,7 @@ body {
     margin-top: 7rem;
 }
 
-.links ul {
+.main-intro .links ul {
     width: fit-content;
     margin: auto;
     display: flex;
@@ -281,7 +281,7 @@ body {
 /* RECENT PROJECTS SECTION */
 
 .recent-projects-section {
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(14, 18, 27);
     padding: 6rem 0;
 }
 
@@ -331,4 +331,31 @@ body {
 
 .hover-content h5 {
     margin-top: 0.7rem;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(22, 22, 22);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .links ul {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer ul li i {
+    font-size: 1rem;
+    background: rgb(40, 40, 43);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.footer p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
 }
