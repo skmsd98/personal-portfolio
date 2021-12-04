@@ -31,7 +31,7 @@ body {
 }
 
 .main-container {
-    width: 100%;
+    width: 85%;
     max-width: 1130px;
     margin: auto;
 }
@@ -260,4 +260,75 @@ body {
     background-color: var(--orange);
     font-weight: bold;
     margin-top: 0.9rem;
+}
+
+/* SKILLS SECTION */
+
+.skills-section {
+    background-color: rgb(22, 22, 22);
+    padding: 6rem 0;
+}
+
+.skills-section .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* RECENT PROJECTS SECTION */
+
+.recent-projects-section {
+    background-color: rgb(22, 22, 22);
+    padding: 6rem 0;
+}
+
+.recent-projects-section .section-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.recent-projects-section .project-item {
+    flex-basis: 32%;
+    margin-bottom: 1rem;
+    position: relative;
+    /* z-index: 0; */
+}
+
+.project-item img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-item .hover-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+.project-item:hover .hover-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hover-content h4 {
+    font-size: 1.1rem;
+}
+
+.hover-content h5 {
+    margin-top: 0.7rem;
 }
