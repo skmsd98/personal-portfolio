@@ -275,7 +275,19 @@ body {
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-item i {
+    font-size: 5rem;
+    margin: 2rem;
+    display: inline-block;
+}
+
+.skill-item:nth-child(5) i,
+.skill-item:nth-child(7) i,
+.skill-item:nth-child(11) i {
+    font-size: 8rem;
 }
 
 /* RECENT PROJECTS SECTION */
