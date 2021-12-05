@@ -14,20 +14,21 @@
 </head>
 
 <body>
-    <section class="hero-section">
+    <section id="home" class="hero-section">
+        <header class="navbar-container">
+            <nav class="navbar">
+                <ul>
+                    <li onclick="_scrollTo('#home')">Home</li>
+                    <li onclick="_scrollTo('#about', -80)">About</li>
+                    <li onclick="_scrollTo('#services', -80)">Services</li>
+                    <li onclick="_scrollTo('#work-and-education', -80)">Work</li>
+                    <li onclick="_scrollTo('#recent-projects', -80)">Portfolio</li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <div class="main-container">
-            <header>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Resume</a></li>
-                    </ul>
-                </nav>
-            </header>
             <div class="main-intro">
                 <h5>Welcome to my website</h5>
                 <h1>I'm Sabir Mahsud</h1>
@@ -43,14 +44,14 @@
                     <a href="#">View Work</a>
                     <a href="#">Send Email</a>
                 </div>
-                <a class="scroll-down-button" href="#">
+                <a class="scroll-down-button" onclick="_scrollTo('#about', -80)">
                     <i class="fas fa-chevron-down"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="about-section">
+    <section id="about" class="about-section">
         <div class="main-container">
             <div class="heading-container">
                 <h2 class="section-heading">About Me</h2>
@@ -78,7 +79,7 @@
         </div>
     </section>
 
-    <section class="services-section">
+    <section id="services" class="services-section">
         <div class="main-container">
             <div class="heading-container">
                 <h2 class="section-heading">My Services</h2>
@@ -143,7 +144,7 @@
         </div>
     </section>
 
-    <section class="work-and-education-section">
+    <section id="work-and-education" class="work-and-education-section">
         <div class="main-container">
             <div class="heading-container">
                 <h2 class="section-heading">Work & Education</h2>
@@ -183,7 +184,7 @@
         </div>
     </section>
 
-    <section class="skills-section">
+    <section id="skills" class="skills-section">
         <div class="main-container">
             <div class="heading-container">
                 <h2 class="section-heading">My Skills</h2>
@@ -236,7 +237,7 @@
         </div>
     </section>
 
-    <section class="recent-projects-section">
+    <section id="recent-projects" class="recent-projects-section">
         <div class="main-container">
             <div class="heading-container">
                 <h2 class="section-heading">Recent Projects</h2>
@@ -291,5 +292,24 @@
         </div>
     </footer>
 </body>
+
+<script>
+    const navbar = document.querySelector('.navbar-container');
+    window.onscroll = () => {
+        if (window.scrollY > 30) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
+    };
+
+    function _scrollTo(selector, yOffset = 0) {
+        const el = document.querySelector(selector);
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
+</script>
 
 </html>

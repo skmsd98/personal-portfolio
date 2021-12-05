@@ -2,7 +2,9 @@
 
 /* Defaults */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,6 +30,7 @@ a {
 body {
     font-family: "Montserrat", sans-serif;
     color: white;
+    scroll-behavior: smooth;
 }
 
 .main-container {
@@ -65,6 +68,7 @@ body {
     background-size: cover;
     position: relative;
     z-index: 1;
+    padding-top: 6.3rem;
 }
 
 .hero-section::after {
@@ -79,13 +83,42 @@ body {
     z-index: -1;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-scrolled {
+    background: white;
+    color: black;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 .navbar > ul {
     display: flex;
     justify-content: center;
 }
 
 .navbar li {
-    margin: 2.5rem 1.2rem;
+    margin: 1.8rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar li:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.nav-scrolled li:hover {
+    border-bottom: 1px solid black;
 }
 
 .main-intro {
@@ -128,6 +161,14 @@ body {
     display: flex;
     gap: 2rem;
     margin-top: 1.5rem;
+}
+
+.main-intro .links i {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.main-intro .links i:hover {
+    opacity: 0.5;
 }
 
 /* ABOUT SECTION */
