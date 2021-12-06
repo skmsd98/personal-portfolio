@@ -93,6 +93,19 @@ header {
     transition: 0.5s ease-in-out;
 }
 
+.close-sidebar-button,
+.hero-section #nav-toggle,
+.hero-section .nav-toggler {
+    display: none;
+}
+
+.nav-toggler i {
+    position: fixed;
+    right: 0.8rem;
+    top: 0.7rem;
+    font-size: 3rem;
+}
+
 .nav-scrolled {
     background: white;
     color: black;
@@ -515,6 +528,58 @@ header {
     .recent-projects-section .project-item {
         flex-basis: 48%;
     }
+
+    header {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        transition: 0.5s ease-in-out;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        width: 40%;
+        min-width: 300px;
+        box-shadow: -1px 0px 2px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: -1px 0px 2px 0px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: -1px 0px 2px 0px rgba(255, 255, 255, 0.75);
+    }
+
+    .hero-section .nav-toggler,
+    #nav-toggle:checked ~ header,
+    #nav-toggle:checked ~ .nav-scrolled {
+        display: unset;
+    }
+
+    .close-sidebar-button {
+        display: unset;
+        position: absolute;
+        right: 1rem;
+        top: -0.5rem;
+        font-size: 4rem;
+    }
+
+    .navbar {
+        height: 100%;
+    }
+
+    .navbar > ul {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 5rem;
+    }
+
+    .navbar li,
+    .navbar li:hover,
+    .nav-scrolled li:hover {
+        margin: unset;
+        padding: unset;
+        border-bottom: unset;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 800px) {
@@ -522,6 +587,10 @@ header {
         flex-direction: column;
         text-align: center;
     }
+
+    .hero-section {
+        padding-top: 0;
+    }    
 }
 
 @media (max-width: 600px) {
