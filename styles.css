@@ -43,6 +43,7 @@ body {
 .section-heading {
     display: inline-block;
     font-size: 2.5rem;
+    line-height: 2.5rem;
     padding: 0 4rem 1rem 4rem;
     position: relative;
 }
@@ -237,7 +238,8 @@ header {
 }
 
 .section-content .text-container {
-    width: 60%;
+    flex: 1;
+    padding-right: 4rem;
     order: 1;
 }
 
@@ -351,7 +353,8 @@ header {
 }
 
 .work-container .work-item {
-    margin-bottom: 3rem;
+    display: block;
+    margin-bottom: 2rem;
 }
 
 .work-item p {
@@ -477,4 +480,82 @@ header {
 .footer p {
     margin-top: 1.5rem;
     font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    .about-section .section-content .image-container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-section .links {
+        display: none;
+    }
+
+    .about-section .section-content .image-container {
+        display: none;
+    }
+
+    .about-section .section-content .text-container {
+        padding-right: 0;
+    }
+
+    .services-container .service-item {
+        flex-basis: 48%;
+    }
+
+    .work-and-education-section .section-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .recent-projects-section .project-item {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 800px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-container .service-item {
+        flex-basis: 100%;
+    }
+
+    .skill-item i {
+        font-size: 5rem;
+        margin: 2rem;
+        display: inline-block;
+    }
+
+    .skill-item:nth-child(5) i,
+    .skill-item:nth-child(7) i,
+    .skill-item:nth-child(11) i {
+        font-size: 6rem;
+    }
+
+    .recent-projects-section .section-content {
+        gap: 1rem;
+    }
+
+    .recent-projects-section .project-item {
+        flex-basis: 98%;
+    }
+}
+
+@media (max-width: 450px) {
+    .section-heading {
+        font-size: 1.8rem;
+    }
+
+    .work-and-education-section .section-content > * {
+        padding: 3rem 2rem;
+    }
 }
