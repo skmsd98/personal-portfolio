@@ -442,30 +442,41 @@ header {
 }
 
 .project-item .hover-content {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    border: 5px solid white;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
-}
-
-.project-item:hover .hover-content {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border: 1px solid white;
+    transition: 0.4s ease;
+}
+
+.project-item:hover .hover-content {
+    border: 5px solid white;
+}
+
+.hover-content .content-text {
+    max-width: 75%;
 }
 
 .hover-content h4 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
 }
 
 .hover-content h5 {
-    margin-top: 0.7rem;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+    background: var(--secondary-color);
+    border-radius: 5%;
+    font-size: 0.5rem;
 }
 
 /* FOOTER */
@@ -590,7 +601,7 @@ header {
 
     .hero-section {
         padding-top: 0;
-    }    
+    }
 }
 
 @media (max-width: 600px) {
