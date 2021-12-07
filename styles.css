@@ -385,6 +385,16 @@ header {
     margin-top: 0.9rem;
 }
 
+.work-item span {
+    font-weight: lighter;
+    margin-left: 0.3rem;
+}
+
+.work-item h5 {
+    font-weight: lighter;
+    margin-top: 0.2rem;
+}
+
 /* SKILLS SECTION */
 
 .skills-section {
